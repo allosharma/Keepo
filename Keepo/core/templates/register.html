@@ -1,0 +1,78 @@
+{% extends 'baseStyle.html' %} {% block start %}
+
+<form
+  class="container d-flex justify-content-center align-items-center vh-100"
+  method="post"
+  enctype="multipart/form-data"
+>
+  <div class="card col-md-5 p-3 shadow-lg">
+    <div class="row justify-content-center mx-auto">
+      <h3>Signup Page</h3>
+    </div>
+    <hr />
+    {% csrf_token %} {% if messages %}
+    <div
+      class="row justify-content-center alert alert-primary p-1 col-md-8 mx-auto"
+      role="alert"
+    >
+      {% for message in messages %} {{message}} {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="container row justify-content-center mb-3 col-md-8 mx-auto">
+      <div class="mb-3">
+        <!-- <label for="exampleInputEmail1" class="form-label">First Name</label> -->
+        <input
+          name="first_name"
+          type="text"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="First Name"
+        />
+      </div>
+      <div class="mb-3">
+        <!-- <label for="exampleInputEmail1" class="form-label">Last Name</label> -->
+        <input
+          name="last_name"
+          type="text"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="Last Name"
+        />
+      </div>
+
+      <div class="mb-3">
+        <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
+        <input
+          name="username"
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="Email Address"
+        />
+      </div>
+
+      <div class="mb-3">
+        <!-- <label for="exampleInputPassword1" class="form-label">Password</label> -->
+        <input
+          name="password"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Password"
+        />
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary col-md-4 mx-auto">
+      Signup
+    </button>
+    <p class="col-md-6 mt-2 mx-auto">
+      Already have an account? <a href="/login/">Login</a>
+    </p>
+  </div>
+</form>
+
+{% endblock %}

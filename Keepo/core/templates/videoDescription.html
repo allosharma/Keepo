@@ -1,0 +1,77 @@
+{% extends 'baseStyle.html' %} {% block start %}
+<div class="container text-center mt-5">
+    <!--
+  <p>Video ID: {{ value }}</p>
+
+  <p>Video Title: {{ title }}</p>
+
+  <p>Video Description: {{ description }}</p>
+  -->
+<!-- Row 1 Video thumbnail and self notes -->
+  <div class="row custom-height">
+    <div class="col-sm-4 border">col-sm-4</div>
+    <div class="col-sm-8 border">
+      <textarea
+        rows="10"
+        class="form-control align-items-center col-md-4 mx-auto card p-1 custom-height"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+        placeholder="Enter your self notes."
+      /></textarea>
+    </div>
+  </div>
+
+  <!-- Row 2 : Summary -->
+<div class="row mt-4">
+    <div class="col-sm-12 border">
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+    </div>
+</div>
+
+<!-- Row 3 : Fliping Card with MCQ -->
+<div class="card-container">
+    <div class="flip-card" id="flipCard">
+      <div class="flip-card-inner front fade-content show" id="cardContentFront">
+        <div class="content">
+          <p>Page 1 of 5 </p>
+          <p>1. Random text on the front side of the card.</p>
+        </div>
+      </div>
+      <div class="flip-card-inner back fade-content" id="cardContentBack">
+        <div class="content">
+          <h5>Page 1 of 5</h5>
+          <p>This is some random text on the back side of the card. Click "Flip" to return to the front.</p>
+          <!-- Radio Options-->
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Default radio
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Default checked radio
+            </label>
+          </div>
+
+        </div>
+      </div>
+  
+      <!-- Flip button -->
+      <span class="btn btn-light flip-btn" id="flipButton">&#8635;</span>
+      <!-- Left and Right arrows -->
+      <span class="left-arrow btn btn-light" id="leftArrow">&larr;</span>
+      <span class="right-arrow btn btn-light" id="rightArrow">&rarr;</span>
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock %}

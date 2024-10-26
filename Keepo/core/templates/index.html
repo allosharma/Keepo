@@ -1,0 +1,53 @@
+{% extends 'baseStyle.html' %} {% block start %}
+
+<!--
+<p>Hello {{ name }}</p>
+class="col-5 mx-auto card p-3 shadow-lg"
+-->
+
+<form
+  class="container row justify-content-center col-md-6 mt-5 mx-auto card p-3 shadow-lg"
+  method="post"
+  enctype="multipart/form-data"
+>
+  {% csrf_token %}
+
+  <div class="input-group flex-nowrap">
+    <span class="input-group-text" id="addon-wrapping">
+      <i class="bi bi-search"></i>
+    </span>
+    <input
+      name="ytLink"
+      type="text"
+      aria-label="First name"
+      class="form-control"
+      placeholder="Enter Link"
+    />
+  </div>
+
+  <div
+    class="btn-group col-md-6 mt-2 mx-auto"
+    role="group"
+    aria-label="Basic checkbox toggle button group"
+  >
+    {% for param in user_params %}
+    <input
+      type="checkbox"
+      class="btn-check"
+      id="btncheck{{forloop.counter}}"
+      autocomplete="off"
+      name="options"
+      value="{{param}}"
+    />
+    <label class="btn btn-outline-primary" for="btncheck{{forloop.counter}}"
+      >{{param}}</label
+    >
+    {% endfor %}
+  </div>
+
+  <button type="submit" class="btn btn-primary col-md-2 mt-2 mx-auto">
+    Search
+  </button>
+</form>
+
+{% endblock %}
