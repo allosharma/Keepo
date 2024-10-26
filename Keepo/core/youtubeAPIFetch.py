@@ -1,6 +1,6 @@
 import requests
 
-api_key = 'AIzaSyBGxY5ZI7yGMh0_vBNaeatSV19ZTJK59Sg'
+api_key = ''
 # video_id = 'VIDEO_ID'
 # Define your API key and video ID
 def fetchYoutubeData(video_id, key=api_key):
