@@ -1,2 +1,2 @@
 # Keepo
-It will store course details
+An application that uses Llama to summarize content and create quizzes based on YouTube videos and web articles. This tool will help students and professionals worldwide save time by providing concise summaries of lengthy videos or blogs. It offers a platform where all summary data can be saved with tags, allowing users to revisit and review them anytime. Users can create custom tags for easy organization. This application enables quick revision for students and allows them to test their knowledge through quizzes, with detailed analysis provided based on their quiz performance.
